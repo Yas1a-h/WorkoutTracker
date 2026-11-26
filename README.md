@@ -43,7 +43,7 @@ A full-stack CRUD application for tracking gym workouts, exercises, and total li
 
 ## Getting Started
 
-1. Clone the repository: `git clone https://github.com/YOUR_USERNAME/WorkoutTracker.git`
+1. Clone the repository: `git clone https://github.com/Yas1a-h/WorkoutTracker.git`
 2. Apply Entity Framework Core migrations: `dotnet ef database update`
 3. Run the application: `dotnet run`
 4. Open the Web UI at `https://localhost:7197` or Swagger UI at `https://localhost:7197/swagger`
