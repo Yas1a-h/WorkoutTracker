@@ -47,3 +47,4 @@ A full-stack CRUD application for tracking gym workouts, exercises, and total li
 2. Apply Entity Framework Core migrations: `dotnet ef database update`
 3. Run the application: `dotnet run`
 4. Open the Web UI at `https://localhost:7197` or Swagger UI at `https://localhost:7197/swagger`
+<img width="1920" height="1080" alt="TEST" src="https://github.com/user-attachments/assets/0b996069-8009-4f46-a0ae-114f88c48287" />
