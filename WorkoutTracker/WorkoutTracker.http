@@ -1,0 +1,30 @@
+@WorkoutTracker_HostAddress = http://localhost:5274
+
+### 1. Получить все упражнения (GET)
+GET {{WorkoutTracker_HostAddress}}/api/exercises
+Accept: application/json
+
+### 2. Добавить новое упражнение (POST)
+POST {{WorkoutTracker_HostAddress}}/api/exercises
+Content-Type: application/json
+
+{
+  "name": "Bench Press",
+  "muscleGroup": "Chest",
+  "weightKg": 80,
+  "reps": 8
+}
+
+### 3. Обновить упражнение с Id = 1 (PUT)
+PUT {{WorkoutTracker_HostAddress}}/api/exercises/1
+Content-Type: application/json
+
+{
+  "name": "Bench Press",
+  "muscleGroup": "Chest",
+  "weightKg": 85,
+  "reps": 6
+}
+
+### 4. Удалить упражнение с Id = 1 (DELETE)
+DELETE {{WorkoutTracker_HostAddress}}/api/exercises/1

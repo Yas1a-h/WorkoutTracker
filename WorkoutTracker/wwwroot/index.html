@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Workout Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Workout Tracker</h1>
+            <a href="/swagger" target="_blank" class="swagger-link">Swagger API</a>
+        </header>
+
+        <div class="forms-grid">
+            <!-- Create Workout -->
+            <section class="card">
+                <h2>New Workout</h2>
+                <form id="workoutForm">
+                    <input type="text" id="workoutTitle" placeholder="Title (e.g. Upper Body)" required />
+                    <input type="date" id="workoutDate" required />
+                    <input type="text" id="workoutNotes" placeholder="Notes (optional)" />
+                    <button type="submit">Add Workout</button>
+                </form>
+            </section>
+
+            <!-- Add Exercise -->
+            <section class="card">
+                <h2>Add Exercise</h2>
+                <form id="exerciseForm">
+                    <select id="workoutSelect" required>
+                        <option value="">Select Workout...</option>
+                    </select>
+                    <input type="text" id="exerciseName" placeholder="Exercise (e.g. Bench Press)" required />
+                    <input type="text" id="muscleGroup" placeholder="Muscle Group (e.g. Chest)" required />
+                    <div class="row">
+                        <input type="number" id="weightKg" placeholder="Weight (kg)" step="0.5" min="0" required />
+                        <input type="number" id="reps" placeholder="Reps" min="1" required />
+                    </div>
+                    <button type="submit">Add Exercise</button>
+                </form>
+            </section>
+        </div>
+
+        <div id="errorBox" class="error hidden"></div>
+
+        <!-- Workouts List -->
+        <section>
+            <div class="list-header">
+                <h2>Workout History</h2>
+                <input type="text" id="muscleFilter" placeholder="Filter exercises by muscle group..." />
+            </div>
+            <div id="workoutsList" class="workouts-list"></div>
+        </section>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
